@@ -1,105 +1,117 @@
 /*begin algemeen*/
 *,
 html {
-    box-sizing: border-box;
-    margin: 0;
-color: white;
+  box-sizing: border-box;
+  margin: 0;
+  color: white;
 }
 
-header, footer{
+header, footer {
   position: fixed;
   height: 5vh;
   width: 100vw;
 }
 
-
-
-
 /*Einde algemeen*/
-
 /* begin header */
-
-header{
+header {
   top: 0;
-   padding: 1vw;
-   padding-left: 1vw;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+  padding: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav li{
+nav li {
   display: inline-flex;
   justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 8vw;
-    border-radius: 10vw;
-    margin: 1vw;
-    height: 3vh;
-    color: #667aff;
+  align-items: center;
+  background-color: white;
+  width: 8vw;
+  border-radius: 10vw;
+  margin: 1vw;
+  height: 3vh;
+  color: #667aff;
 }
 
 /* einde header */
-
-
 /* begin div */
-
-main > div {
+main>div {
   padding: 1vw;
   padding-top: 8vh;
   padding-bottom: 8vh;
   height: 100vh;
 }
 
-div h2{
+div h2 {
   margin-bottom: 1vh;
 }
 
 .overMij {
-    background-color: #667aff;
+  background-color: #667aff;
 }
 
 .skills {
   background-color: #4f66ff;
-
 }
 
-.goals{
+.goals {
   background-color: #3b54ff;
-
 }
 
-.contact{
-background-color: #2b46ff;
+.contact {
+  background-color: #2b46ff;
 }
 
 /* einde div */
-
 /* begin over mij */
-.overmij{
-  display: flex;
-  flex-direction: row;
+.overMij span {
+  display: inline-flex;
+  vertical-align: top;
+  width: 48vw;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
 }
 
-.overMij div{
-  width: 49vw;
-}
-
-.overMij img{
-  width: 20vh;
+.overMij img {
+  height: 40vh;
 }
 
 /* einde over mij */
-/* begin footer */
-footer{
+/* begin contact */
+.contact span {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: top;
+  width: 48vw;
+  height: 48vh;
+}
+
+.contact span a {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom:0;
+  background-color: white;
+  width: 20vw;
+  border-radius: 10vw;
+  margin: 1vw;
+  height: 6vh;
+  color: #667aff;
+  text-decoration: none;
 }
 
-footer p{
+/* einde contact */
+/* begin footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+
+footer p {
   background-color: white;
   width: 8vw;
   border-radius: 10vw;
@@ -107,29 +119,28 @@ footer p{
   height: 3vh;
   display: flex;
   justify-content: center;
-    align-items: center;
+  align-items: center;
 }
 
 /* einde footer */
-
 /* begin actief verandert */
-.actief{
+.actief {
   color: black;
 }
 
-.kleurOverMij{
-color: #667aff;
+.kleurOverMij {
+  color: #667aff;
 }
 
-.kleurSkills{
-color: #4f66ff;
+.kleurSkills {
+  color: #4f66ff;
 }
 
-.kleurGoals{
-color: #3b54ff;
+.kleurGoals {
+  color: #3b54ff;
 }
 
-.kleurContact{
+.kleurContact {
   color: #2b46ff;
 }
 
