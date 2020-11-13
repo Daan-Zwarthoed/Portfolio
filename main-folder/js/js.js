@@ -36,7 +36,6 @@ function updatePage() {
     linkSkills.classList.remove(kleurenArray[k]);
     linkGoals.classList.remove(kleurenArray[k]);
     linkContact.classList.remove(kleurenArray[k]);
-    body.classList.remove(kleurenArray[k]);
   }
   if (scrollY < 789) {
     currentPage = linkOverMij;

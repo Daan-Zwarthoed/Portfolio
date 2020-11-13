@@ -12,8 +12,6 @@ header, footer {
   width: 100vw;
 }
 
-
-
 /*Einde algemeen*/
 /* begin header */
 header {
@@ -82,13 +80,69 @@ div h2 {
 }
 
 /* einde over mij */
-
-/* begin goals*/
-.goals article{
-  width: 40vw;
+/* begin skills */
+.skills>div {
+  border-style: solid;
+  border-color: white;
+  display: flex;
+  width: 98vw;
+  height: 50vh;
+  justify-content: space-around;
+  background-image: url('../images/tekeningVorm.svg');
+  background-repeat: no-repeat;
+  background-size: 98vw;
+  margin-top: 2vh;
 }
-/* einde goals */
 
+
+.skills a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 20vw;
+  border-radius: 10vw;
+  margin: 1vw;
+  height: 6vh;
+  color: #4f66ff;
+  text-decoration: none;
+  margin-top: 10vh;
+}
+
+.yeetusdeltus{
+  margin-top: 30vh !important;
+}
+
+
+/* einde skills */
+/* begin goals*/
+.goals article ul {
+  margin-top: 1vh;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.goals article li {
+  display: inline-flex;
+  border-style: solid;
+  border-color: white;
+  width: 98vw;
+  height: 20vh;
+  padding: 0.3vh
+}
+
+.goals article img {
+  display: inline-flex;
+  width: 10vw;
+}
+
+.goals ul {
+  padding-left: 0;
+}
+
+/* einde goals */
 /* begin contact */
 .contact span {
   display: inline-flex;
@@ -109,7 +163,7 @@ div h2 {
   border-radius: 10vw;
   margin: 1vw;
   height: 6vh;
-  color: #667aff;
+  color: #2b46ff;
   text-decoration: none;
 }
 
