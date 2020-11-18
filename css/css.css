@@ -4,12 +4,28 @@ html {
   box-sizing: border-box;
   margin: 0;
   color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body div, header, footer{
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+p, li, a{
+   font-size: 1.1em;
 }
 
 header, footer {
   position: fixed;
   height: 5vh;
   width: 100vw;
+  z-index: 10;
+}
+
+nav li:hover, a:hover, footer p:hover, .middleLink:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 4px black;
 }
 
 /*Einde algemeen*/
@@ -31,9 +47,11 @@ nav li {
   width: 8vw;
   border-radius: 10vw;
   margin: 1vw;
-  height: 3vh;
+  height: 1.5em ;
   color: #667aff;
 }
+
+
 
 /* einde header */
 /* begin div */
@@ -52,7 +70,7 @@ div h2 {
   background-color: #667aff;
 }
 
-.skills {
+.MijnWerk {
   background-color: #4f66ff;
 }
 
@@ -65,56 +83,71 @@ div h2 {
 }
 
 /* einde div */
+
 /* begin over mij */
-.overMij span {
+.overMij{
   display: inline-flex;
-  vertical-align: top;
-  width: 48vw;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content:flex-start;
+  flex-wrap: wrap;s
+}
+
+.overMij > * {
+  width: 600px;
   margin-bottom: 1vh;
   margin-top: 1vh;
+
 }
 
 .overMij img {
-  max-height: 40vh;
-  max-width: 40vw;
+ width: 300px;
 }
+
 
 /* einde over mij */
-/* begin skills */
-.skills>div {
-  border-style: solid;
-  border-color: white;
+
+/* Begin MijnWerk */
+.links{
   display: flex;
   width: 98vw;
-  height: 50vh;
-  justify-content: space-around;
-  background-image: url('../images/tekeningVorm.svg');
-  background-repeat: no-repeat;
-  background-size: 98vw;
-  margin-top: 2vh;
+  flex-wrap: wrap;
+  height: 400px;
+  justify-content: center;
+  padding-top: 50px;
+
+}
+
+.links span{
+width: 600px;
+max-width: 98vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+
 }
 
 
-.skills a {
+.links a {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 20vw;
-  border-radius: 10vw;
-  margin: 1vw;
-  height: 6vh;
-  color: #4f66ff;
+  padding-left: 10px; padding-right: 10px;
+  width: 10em;
+  border-radius: 100px;
+  height: 1.5em;
+  color: #667aff;
   text-decoration: none;
-  margin-top: 10vh;
+  margin-bottom: 1em;
 }
 
-.yeetusdeltus{
-  margin-top: 30vh !important;
-}
+/* Einde MijnWerk */
 
 
-/* einde skills */
 /* begin goals*/
 .goals article ul {
   margin-top: 1vh;
@@ -124,23 +157,31 @@ div h2 {
   justify-content: space-around;
 }
 
+.goals ul {
+  padding-left: 0;
+}
+
 .goals article li {
   display: inline-flex;
   border-style: solid;
   border-color: white;
-  width: 98vw;
-  height: 20vh;
-  padding: 0.3vh
+  height: 10.5em;
+  padding: 0.3vh;
 }
 
 .goals article img {
   display: inline-flex;
-  width: 10vw;
+  width: 10em;
+  object-fit:contain;
+  margin-right: 1vw;
 }
 
-.goals ul {
-  padding-left: 0;
+.goals article li p{
+  display: flex;
+  justify-content: center;
+  align-items:  center;
 }
+
 
 /* einde goals */
 /* begin contact */
@@ -150,7 +191,7 @@ div h2 {
   align-items: center;
   justify-content: center;
   vertical-align: top;
-  width: 48vw;
+  width: 47vw;
   height: 38vh;
 }
 
@@ -168,6 +209,7 @@ div h2 {
 }
 
 /* einde contact */
+
 /* begin footer */
 footer {
   display: flex;
@@ -188,16 +230,17 @@ footer p {
 }
 
 /* einde footer */
+
 /* begin actief verandert */
 .actief {
-  color: black;
+  color: black !important;
 }
 
 .kleurOverMij {
   color: #667aff;
 }
 
-.kleurSkills {
+.kleurMijnWerk {
   color: #4f66ff;
 }
 
@@ -208,5 +251,22 @@ footer p {
 .kleurContact {
   color: #2b46ff;
 }
+
+.achtergrondKleurOverMij {
+  background-color: #667aff;
+}
+
+.achtergrondKleurMijnWerk {
+  background-color: #4f66ff;
+}
+
+.achtergrondKleurGoals {
+  background-color: #3b54ff;
+}
+
+.achtergrondKleurContact {
+  background-color: #2b46ff;
+}
+
 
 /* einde actief verandert */

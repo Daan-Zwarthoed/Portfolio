@@ -3,67 +3,116 @@
 /*eslint-env browser*/
 
 /*eslint 'no-console': 0*/
+
 // Start variablen nodig
 var overMij = document.querySelector('.overMij');
-var skills = document.querySelector('.skills');
+var MijnWerk = document.querySelector('.MijnWerk');
 var goals = document.querySelector('.goals')
 var contact = document.querySelector('.contact');
 
 var linkOverMij = document.querySelector('.linkOverMij');
-var linkSkills = document.querySelector('.linkSkills');
+var linkMijnWerk = document.querySelector('.linkMijnWerk');
 var linkGoals = document.querySelector('.linkGoals');
 var linkContact = document.querySelector('.linkContact');
 
 var currentPage = linkOverMij;
 var i;
 var k;
+var a;
+var e;
 var goDown = document.querySelector('.goDown');
 
 var navigatie = document.querySelector('.navigatie');
-var kleurenArray = ['.kleurOverMij', 'kleurSkills', 'kleurGoals', 'kleurContact'];
-var veranderenArray = [goDown, linkOverMij, linkSkills, linkGoals, linkContact];
-var gekozenKleur;
+var kleurenArray = ['kleurOverMij', 'kleurMijnWerk', 'kleurGoals', 'kleurContact'];
+var veranderenArray = [linkOverMij, linkMijnWerk, linkGoals, linkContact];
+var gekozenKleurHeader;
 
+var scrollMijnWerk= MijnWerk.getBoundingClientRect().top + window.scrollY;
+var scrollGoals = goals.getBoundingClientRect().top + window.scrollY;
+var scrollContact = contact.getBoundingClientRect().top + window.scrollY;
 
+var windowHeight = window.innerHeight;
+
+var header = document.querySelector('header');
+var footer = document.querySelector('footer');
+var body= document.querySelector('body');
+var achtergrondKleurArray = ['achtergrondKleurOverMij', 'achtergrondKleurMijnWerk', 'achtergrondKleurGoals', 'achtergrondKleurContact'];
+var achtergrondVeranderenArray = [header, body];
+var gekozenAchtergrondKleurHeader;
 // Einde variablen nodig
 
 // Start pagina updaten
 function updatePage() {
   currentPage.classList.remove('actief')
-  for (k = 0; k < kleurenArray.length; k++) {
+
+  for (k = 0; k < kleurenArray.length + 1; k++) {
     goDown.classList.remove(kleurenArray[k]);
     linkOverMij.classList.remove(kleurenArray[k]);
-    linkSkills.classList.remove(kleurenArray[k]);
+    linkMijnWerk.classList.remove(kleurenArray[k]);
     linkGoals.classList.remove(kleurenArray[k]);
     linkContact.classList.remove(kleurenArray[k]);
   }
-  if (scrollY < 789) {
+
+  for (a = 0; a <= achtergrondVeranderenArray.length + 1; a++) {
+   header.classList.remove(achtergrondKleurArray[a]);
+   footer.classList.remove(achtergrondKleurArray[a]);
+   body.classList.remove(achtergrondKleurArray[a]);
+  }
+
+// veranderen top
+  if (scrollY < scrollMijnWerk) {
     currentPage = linkOverMij;
-    gekozenKleur = 'kleurOverMij'
-    goDown.innerHTML = 'Go down'
+    gekozenKleurHeader = 'kleurOverMij'
+    gekozenAchtergrondKleurHeader = 'achtergrondKleurOverMij';
 
-  } else if (scrollY < 1578) {
-    currentPage = linkSkills
-    gekozenKleur = 'kleurSkills'
-    goDown.innerHTML = 'Go down'
+  } else if (scrollY < scrollGoals) {
+    currentPage = linkMijnWerk
+    gekozenKleurHeader = 'kleurMijnWerk'
+    gekozenAchtergrondKleurHeader = 'achtergrondKleurMijnWerk';
 
-  } else if (scrollY < 2367) {
+  } else if (scrollY < scrollContact) {
     currentPage = linkGoals;
-    gekozenKleur = 'kleurGoals'
-
-    goDown.innerHTML = 'Go down'
+    gekozenKleurHeader = 'kleurGoals'
+    gekozenAchtergrondKleurHeader = 'achtergrondKleurGoals';
 
 
   } else {
     currentPage = linkContact;
-    gekozenKleur = 'kleurContact'
-    goDown.innerHTML = 'To top'
+    gekozenKleurHeader = 'kleurContact'
+    gekozenAchtergrondKleurHeader = 'achtergrondKleurContact';
   }
-  for (var i = 0; i < veranderenArray.length; i++) {
-    veranderenArray[i].classList.add(gekozenKleur)
-  }
-  currentPage.classList.add('actief')
+console.log(footer);
+// Veranderen bodem
+  if (scrollY + windowHeight <= scrollMijnWerk) {
 
+    goDown.classList.add('kleurOverMij');
+    footer.classList.add('achtergrondKleurOverMij');
+    goDown.innerHTML = 'Go down';
+
+  } else if (scrollY + windowHeight <= scrollGoals) {
+    goDown.classList.add('kleurMijnWerk');
+    footer.classList.add('achtergrondKleurMijnWerk');
+    goDown.innerHTML = 'Go down';
+
+  } else if (scrollY + windowHeight <= scrollContact) {
+    goDown.classList.add('kleurGoals');
+    footer.classList.add('achtergrondKleurGoals');
+    goDown.innerHTML = 'Go down';
+
+
+  } else {
+    goDown.classList.add('kleurContact') ;
+    footer.classList.add('achtergrondKleurContact') ;
+    goDown.innerHTML = 'To top';
+  }
+
+  for (var i = 0; i < veranderenArray.length; i++) {
+    veranderenArray[i].classList.add(gekozenKleurHeader)
+  }
+  for (var e = 0; e < achtergrondVeranderenArray.length; e++) {
+    achtergrondVeranderenArray[e].classList.add(gekozenAchtergrondKleurHeader)
+  }
+  currentPage.classList.add('actief');
 }
 updatePage();
 window.addEventListener('scroll', updatePage);
@@ -76,8 +125,8 @@ function scroll(link) {
       overMij.scrollIntoView({
         behavior: 'smooth'
       });
-    } else if (link.classList[0] == 'linkSkills') {
-      skills.scrollIntoView({
+    } else if (link.classList[0] == 'linkMijnWerk') {
+      MijnWerk.scrollIntoView({
         behavior: 'smooth'
       });
     } else if (link.classList[0] == 'linkGoals') {
@@ -116,10 +165,10 @@ navigatieUpdaten();
 // Begin pagedown onderin
 function pageDown(page) {
   if (page.classList[0] == 'linkOverMij') {
-    skills.scrollIntoView({
+    MijnWerk.scrollIntoView({
       behavior: 'smooth'
     });
-  } else if (page.classList[0] == 'linkSkills') {
+  } else if (page.classList[0] == 'linkMijnWerk') {
     goals.scrollIntoView({
       behavior: 'smooth'
     });

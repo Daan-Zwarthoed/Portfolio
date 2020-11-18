@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Home pagina portfolio</title>
   <link rel="stylesheet" href="css/css.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
 
@@ -13,13 +15,13 @@
 <body class=''>
 
   <!-- Begin header -->
-  <header>
+  <header class="">
     <h1>Daan Zwarthoed Portfolio</h1>
     <nav>
       <ul class="navigatie">
         <li class='linkOverMij'>Over mij</li>
 
-        <li class='linkSkills'>Skills</li>
+        <li class='linkMijnWerk'>Mijn werk</li>
 
         <li class='linkGoals'>Goals</li>
 
@@ -43,59 +45,79 @@
             Ik ben opzoek naar een stage in Frontend van 1 februari t/m 9 april 2021.</p>
         </article>
       </span>
+
       <span>
         <img src="images/portfolio-foto.jpg" alt="Foto van Daan Zwarthoed van zomervakantie 2020">
       </span>
-      <span>
-        <article>
-          <h2>CV</h2>
-          <p>U kunt <a href="images/portfolioZelf.jpg" target="_blank">hier</a> klikken om mijn CV te zien.</p>
-        </article>
 
-      </span>
-      <span><img src="images/portfolioZelf.jpg"></span>
+      <article>
+        <h2>Mijn skills</h2>
+        <p>Waar ik het beste in ben en het leukste vindt is Front-end. Ik vindt dit super leuk en vindt ook dat ik er goed in ben. HTML en CSS kan ik goed. Javascript is een stuk lastiger, maar ook hier kom ik meestal snel uit.</p>
+        <p>Ik heb daarnaast ervaring met Adobe programma's zoals animate, illustrator, photoshop, XD en InDesign. </p>
+        <div w3-include-html="index.html"></div>
+
+      </article>
+
     </div>
 
     <!-- einde over mij -->
 
 
-    <!-- begin skills -->
+    <!-- begin MijnWerk -->
 
-    <div class="skills">
-      <h2>Mijn skills</h2>
-      <p>Waar ik het beste in ben en het leukste vindt is Front-end. Ik vindt dit super leuk en vindt ook dat ik er goed in ben. HTML en CSS kan ik goed. Javascript is een stuk lastiger, maar ook hier kom ik meestal snel uit.</p>
-      <p>Ik ben daarnaast ervaring met Adobe programma's zoals animate, illustrator, photoshop, XD en InDesign. </p>
-      <p>Ik heb hier nog een lijstje gemaakt met dingen die ik vorig en dit jaar heb gemaakt.</p>
-  <div>
-      <a href="inleidingProgrammerenEindopdracht/pesten.html">pesten nagemaakt</a>
+    <div class="MijnWerk">
+      <h2>Mijn werk</h2>
+      <p>Hier kunt u een aantal links vinden naar projecten die ik heb gemaakt en de daarbij behorende code. Ik heb ook nog een link gegeven naar mijn CV als u daar interrese voor hebt.</p>
+      <div class="links">
+        <span>
+          <a href="inleidingProgrammerenEindopdracht/pesten.html">pesten nagemaakt</a>
+          <p>Dit is het eerste project dat ik heb gemaakt met Javascript en is het project waarmee ik realiseerde dat ik javascript heel leuk vond.</p>
+        </span>
 
-      <a class="yeetusdeltus" href="naar passie project">passie project (WIP)</a>
+        <span>
+          <a href="passieProject/index.html" class="middleLink">passie project</a>
+          <p>Dit was een groepsproject waarin je zelf mocht kiezen wat je wilde maken. Wij hebben toen gekozen voor een interactieve film. Helaas hebben we niet genoeg tijd gehad om hem helemaal af te maken, maar ik heb alle code ervoor geschreven en ben er toch trots op.</p>
+        </span>
 
-      <a href='link naar zelfgemaakte kijk naar deze code document'>De code van dit document</a>
+        <span>
+          <a href='codePortfolio/index.html'>Code dit document</a>
+          <p>Dit is de code voor dit portfolio als u daar naar wilt kijken. Dit is het meest recente dat ik heb gemaakt en daardoor waarschijnlijk ook het meest accuurate voorstelling van mijn skill level.</p>
+        </span>
 
-  </div>
+        <span>
+          <a href="images/cvZelf.pdf">CV</a>
+          <p>Deze link gaat naar mijn CV als u die nog wilt inzien.</p>
 
+        </span>
+      </div>
     </div>
 
-    <!-- einde skills -->
+    <!-- einde MijnWerk -->
 
     <!-- begin goals -->
 
     <div class="goals">
       <article>
         <h2>Mijn goals in een stage</h2>
-        <p>Zoals ik in mijn CV heb besproken zijn er 3 dingen waar ik graag aan wil werken in mijn stage.</p>
-        <p>Als ik aan een en/of twee van deze doelen kan werken zal ik in mijn stage al super tevreden.</p>
+        <p>Er zijn 3 dingen waar ik graag aan wil werken in mijn stage.</p>
+        <p>Als ik aan een en/of twee van deze doelen kan werken zal ik in mijn stage al super tevreden zijn.</p>
         <ul>
 
-          <li> <img src="images/html-css-js.png" alt=""> Ik wil ten eerste heel graag nog beter worden in HTML, CSS en Javascript. Zoals ik bij skills zei ben ik daar al goed in alleen weet ik ook dat er altijd nog veel te lerven valt over deze dingen.</li>
-          <li> <img src="images/cms.png" alt=""> Het tweede is CMS systemen zoals Wordpress. Ik heb hier nog weinig mee gewerkt en ben hier nog niet heel goed mee. Hier zou ik het leuk vinden om aan te werken. Ik realiseer namelijk dat ik later veel mee ga werken dus het is goed om daar
-            nu mee te oefenen.</li>
-            <li><img src="images/jQuery.webp" alt="">Het derde waar ik graag nog mee wil gaan werken is jQuery. Ik heb dit tot nu toe 1 keer gebruikt en ik vindt dit nog erg lastig. Ik zou hier graag meer over leren aangeizen het het coderen een stuk makkelijker kan maken.</li>
+          <li> <img src="images/html-css-js.png" alt="">
+            <p>Ik wil ten eerste heel graag nog beter worden in HTML, CSS en Javascript. Ik ben hier al redelijk goed in. Maar ik weert ook dat er nog heel veel te leren valt.</p>
+          </li>
+          <li> <img src="images/cms.png" alt="">
+            <p>Het tweede is CMS systemen zoals Wordpress. Ik heb hier nog weinig mee gewerkt en ben hier nog niet heel goed mee. Hier zou ik het leuk vinden om aan te werken. Ik realiseer namelijk dat ik later veel mee ga werken dus het is goed om
+              daar
+              nu mee te oefenen.</p>
+          </li>
+          <li><img src="images/jQuery.webp" alt="">
+            <p>Het derde waar ik graag nog mee wil gaan werken is jQuery. Ik heb dit tot nu toe 1 keer gebruikt en ik vindt dit nog erg lastig. Ik zou hier graag meer over leren aangeizen het het coderen een stuk makkelijker kan maken</p>
+          </li>
 
         </ul>
 
-  </article>
+      </article>
 
 
 
